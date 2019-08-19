@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//Styles
+import "./App.css";
+
+//Components
+import Header from "./components/Header";
+import People from "./components/People";
+import PeopleList from "./components/PeopleList";
+
+//Redux
+import { useDispatch } from "react-redux";
+import { fetchPeople } from "./redux/actions/index";
 
 function App() {
+  const dispatch = useDispatch();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/people" exact component={People} />
+          <Route path="/people/:id" exact component={PeopleList} />
+        </Switch>
+      </Router>
     </div>
   );
 }

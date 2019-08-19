@@ -1,0 +1,35 @@
+/* Header */
+* {
+  margin: 0;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background: #444;
+  color: whitesmoke;
+}
+.header-title {
+  margin: 1rem;
+  justify-self: start;
+  cursor: pointer;
+}
+.header-grid {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  background: #444;
+  color: whitesmoke;
+  padding: 1rem 0.1rem;
+  font-weight: 600;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+.header-link {
+  list-style: none;
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+}
