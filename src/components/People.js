@@ -1,19 +1,16 @@
 import React from "react";
 import "./people.css";
+import PeopleList from "./PeopleList";
 
 import { Link } from "react-router-dom";
 
 //Redux
 import { useDispatch } from "react-redux";
-import { fetchPeople } from "../redux/actions/index";
-import { useSelector } from "react-redux";
+import { fetchPeople, setSearchField } from "../redux/actions/index";
 
 function People() {
-  const peoples = useSelector(state => state.fetch);
-
   const dispatch = useDispatch();
 
-  console.log("1", peoples);
   return (
     <React.Fragment>
       <div>
@@ -52,22 +49,14 @@ function People() {
           </ul>
         </div>
         <div className="searchField-div">
-          <input className="searchField" placeholder="..." />
-          {/* onChange={onSearchChange} */}
+          <input
+            className="searchField"
+            placeholder="..."
+            onChange={e => dispatch(setSearchField(e.target.value))}
+          />
         </div>
 
-        <div className="people-list">
-          {peoples.people ? (
-            peoples.people.map(x => (
-              <Link to={`/people/${x._id}`} className="people-list-item">
-                {" "}
-                {x.name}{" "}
-              </Link>
-            ))
-          ) : (
-            <h1>Undefined</h1>
-          )}
-        </div>
+        <PeopleList />
       </div>
     </React.Fragment>
   );

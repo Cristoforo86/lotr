@@ -27,3 +27,10 @@ export const fetchPerson = id => dispatch => {
     )
     .catch(err => console.log(err));
 };
+
+export const setSearchField = searchField => dispatch => {
+  dispatch({
+    type: "CHANGE_SEARCHFIELD",
+    payload: searchField
+  });
+};
