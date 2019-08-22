@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./people.css";
+import { Link } from "react-router-dom";
+
 //Redux
 import { useDispatch } from "react-redux";
 import { fetchPerson } from "../redux/actions/index";
@@ -31,8 +33,12 @@ function PeopleList({ match }) {
               )}
             </h3>
             <h3>{person.death && <h3>Died: {person.death}</h3>}</h3>
-            <h3>
-              {person.wikiUrl && <h3>Further Details: {person.wikiUrl}</h3>}
+            <h3 className="people-links-h3">
+              {person.wikiUrl && (
+                <a className="people-links" href={`${person.wikiUrl}`}>
+                  More Infos
+                </a>
+              )}
             </h3>
           </li>
         ) : (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.components.css";
+import "./header.styles.css";
 import { Link } from "react-router-dom";
 function Header() {
   return (
@@ -7,7 +7,9 @@ function Header() {
       <nav>
         <ul className="header-container">
           <div className="header-title">
-            <h1>Lord of the Rings Library</h1>
+            <Link to="/" className="header-title-link">
+              Lord of the Rings Library
+            </Link>
           </div>
           <div className="header-grid">
             <li>Books</li>

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 10rem;
+  height: 6rem;
 }
 .people-links {
   padding: 2rem;
@@ -11,6 +11,10 @@
   font-size: 1.5rem;
   color: black;
 }
+.people-links-h3 {
+  padding: 2rem;
+}
+
 .people-links:hover {
   color: #555;
 }
@@ -18,21 +22,23 @@
 .people-list {
   width: auto;
   height: 100%;
-  border: 3px solid #555;
+  /* border: 3px solid rgb(0, 0, 0); */
   display: grid;
-  grid-template-columns: 16% 16% 16% 16% 16% 16%;
-  justify-items: start;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
   grid-gap: 15px 10px;
+  column-gap: 15px;
+  padding: 0.1rem;
 }
 .people-list-item {
   width: 90%;
   height: 5rem;
   padding: 1rem;
   text-decoration: none;
-  color: #444;
+  color: black;
   font-weight: 700;
   font-size: 1.5rem;
-  border: 3px solid #555;
+  /* border: 3px solid rgb(0, 0, 0); */
 }
 
 .person-card-container {
@@ -46,4 +52,17 @@
   height: auto;
 
   width: 50%;
+}
+.person-card,
+li {
+  list-style: none;
+}
+.searchField-div {
+  padding: 1rem;
+}
+.searchField {
+  width: 40%;
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
 }

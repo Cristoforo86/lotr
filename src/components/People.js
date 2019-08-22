@@ -51,6 +51,10 @@ function People() {
             </Link>
           </ul>
         </div>
+        <div className="searchField-div">
+          <input className="searchField" placeholder="..." />
+          {/* onChange={onSearchChange} */}
+        </div>
 
         <div className="people-list">
           {peoples.people ? (

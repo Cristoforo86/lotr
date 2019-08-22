@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Styles
 import "./App.css";
@@ -9,12 +9,8 @@ import People from "./components/People";
 import PeopleList from "./components/PeopleList";
 
 //Redux
-import { useDispatch } from "react-redux";
-import { fetchPeople } from "./redux/actions/index";
 
 function App() {
-  const dispatch = useDispatch();
-
   return (
     <div className="App">
       <Router>
