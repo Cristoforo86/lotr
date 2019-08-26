@@ -16,7 +16,6 @@ function PeopleListItem({ match }) {
   }, []);
   return (
     <React.Fragment>
-      <h1>Test</h1>
       <div className="person-card-container">
         <div className="person-card">
           {person ? (
