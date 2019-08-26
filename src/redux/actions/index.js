@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const fetchPeople = race => dispatch => {
-  axios.defaults.headers.get["Authorization"] = "Bearer 4VMR-jnaJc-n_GHpNr_k";
+  axios.defaults.headers.get["Authorization"] = `Bearer ${REACT_APP_TOKEN}`;
   axios
     .get(`https://the-one-api.herokuapp.com/v1/character?race=${race}`)
 
