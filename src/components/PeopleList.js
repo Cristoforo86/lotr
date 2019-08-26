@@ -21,7 +21,11 @@ function PeopleList() {
               return item.name.toLowerCase().includes(search.toLowerCase());
             })
             .map(x => (
-              <Link to={`/people/${x._id}`} className="people-list-item">
+              <Link
+                to={`/people/${x._id}`}
+                className="people-list-item"
+                key={x._id}
+              >
                 {" "}
                 {x.name}{" "}
               </Link>

@@ -19,30 +19,35 @@ function People() {
             <Link
               className="people-links"
               onClick={() => dispatch(fetchPeople("Human"))}
+              to="/people"
             >
               Humans
             </Link>
             <Link
               className="people-links"
               onClick={() => dispatch(fetchPeople("Hobbit"))}
+              to="/people"
             >
               Hobbits
             </Link>
             <Link
               className="people-links"
               onClick={() => dispatch(fetchPeople("Dwarf"))}
+              to="/people"
             >
               Dwarfs
             </Link>
             <Link
               className="people-links"
               onClick={() => dispatch(fetchPeople("Elf"))}
+              to="/people"
             >
               Elves
             </Link>
             <Link
               className="people-links"
               onClick={() => dispatch(fetchPeople("Orc"))}
+              to="/people"
             >
               Orcs
             </Link>

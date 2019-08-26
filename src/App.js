@@ -7,6 +7,7 @@ import "./App.css";
 import Header from "./components/Header";
 import People from "./components/People";
 import PeopleList from "./components/PeopleList";
+import PeopleListItem from "./components/PeopleListItem";
 
 //Redux
 
@@ -17,7 +18,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/people" exact component={People} />
-          <Route path="/people/:id" exact component={PeopleList} />
+          <Route path="/people/:id" exact component={PeopleListItem} />
         </Switch>
       </Router>
     </div>
